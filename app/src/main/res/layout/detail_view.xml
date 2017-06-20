@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.github.putraxor.conductormvvm.viewmodel.DetailViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/group_logo_desc"
+            android:scaleType="centerCrop"
+            app:imageResId="@{vm.group.poster}"
+            tools:src="@drawable/poster_jellyfish" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="80dp"
+            app:cardCornerRadius="@dimen/default_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_marginBottom="@dimen/default_padding"
+                    app:imageResId="@{vm.group.logo}"
+                    tools:src="@drawable/ic_telegram" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/default_padding"
+                    android:text="@{vm.group.name}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    tools:text="Group Name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{vm.group.type}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    tools:text="Telegram" />
+
+                <TextView
+                    android:text="@{vm.group.link}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:text="http://linktowebsite.com/some/path" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.3"
+                        android:padding="4dp"
+                        android:text="@{vm.group.info}"
+                        tools:text="@string/lorem_ipsum" />
+
+                </ScrollView>
+
+                <android.support.v7.widget.AppCompatButton
+                    style="@style/Base.Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{vm::onClickVisitLink}"
+                    android:text="@string/visit_group_link" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+</layout>

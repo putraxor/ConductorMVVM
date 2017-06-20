@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Conductor MVVM</string>
+    <string name="view_source">View Source Code</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet luctus cursus. Aenean pellentesque egestas odio et tristique. Pellentesque aliquet volutpat suscipit. Nam vehicula arcu ut magna porta viverra.\n
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet luctus cursus. Aenean pellentesque egestas odio et tristique. Pellentesque aliquet volutpat suscipit. Nam vehicula arcu ut magna porta viverra.\n
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet luctus cursus. Aenean pellentesque egestas odio et tristique. Pellentesque aliquet volutpat suscipit. Nam vehicula arcu ut magna porta viverra.</string>
+    <string name="visit_group_link">Visit Group Link</string>
+    <string name="group_logo_desc">Group Logo</string>
+</resources>
