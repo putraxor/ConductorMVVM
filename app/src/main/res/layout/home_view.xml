@@ -15,6 +15,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--
+        if you encountered error that saying can't find setter for app:lastAdapter
+        just remove that attribute below and clean+rebuild
+        it seems kotlin kapt bugs
+        -->
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
