@@ -19,7 +19,7 @@ class HomeViewModel {
     private val groups = DataProvider.findAll()
     var onItemClickListener: OnItemClick? = null
 
-    var adapter = LastAdapter(groups, BR.item)
+    var adapter:LastAdapter = LastAdapter(groups, BR.item)
             .map<Group, HomeItemBinding>(R.layout.home_item) {
                 onClick { onItemClickListener?.onClick(it.binding.item, it.adapterPosition) }
             }
